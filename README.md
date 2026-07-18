@@ -31,7 +31,7 @@ The solid-item system is disabled by default. Its individual item and location s
 
 - Factorio 2.1, with or without Space Age.
 - Cannot be enabled at the same time as `Flammable_Oils` or `Flammable_Oils_QUICKFIX` because they provide overlapping prototypes and behavior.
-- Retains optional load-order compatibility with KS Power, Factorio Tiberium, Water Turret Revived, and Lily's Incendiaries.
+- Retains optional load-order compatibility with KS Power, Factorio Tiberium, Water Turret Revived, and Lily's Incendiaries (if they're ever updated).
 
 ## Credits and license
 
