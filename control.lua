@@ -208,7 +208,7 @@ local function ensure_storage()
   storage.ready_solid_scans = normalize_queue(storage.ready_solid_scans or new_queue())
   storage.active_solid_cells = storage.active_solid_cells or {}
 
-  -- Migrate requests saved by 0.3.0.
+  -- Migrate requests saved by earlier development builds.
   if storage.pending_explosions then
     for _, explosion in ipairs(storage.pending_explosions) do
       push_queue(storage.ready_explosions, explosion)

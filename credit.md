@@ -8,3 +8,4 @@
 - Kannagimoe 0.2.15 - v2.0
 - lilys-incendiaries (lily) 0.2.15 - v2.0, review
 - IonShield(MsBinaryLily) - 0.2.17
+- cciacona - 0.3.0 Factorio 2.1 continuation

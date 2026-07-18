@@ -1,203 +1,27 @@
 ---------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------
-Version: 0.5.0
-Date: 2026-07-17
-  Features:
-    - Added optional fire reactions for wood, coal, solid fuel, rocket fuel, filled fluid barrels, and flamethrower ammunition
-    - Added item burning on transport belts and for stacks dropped on the ground
-    - Added cargo reactions when supported items are inside destroyed chests, logistic containers, linked containers, or cargo wagons
-    - Added separate runtime settings for each item type and location
-  Changes:
-    - Disabled the complete solid-item system by default to preserve existing-save behavior
-    - Made coal burn more slowly and pollute more than wood
-    - Made solid fuel burn without detonating, while rocket fuel and flamethrower ammunition can explode
-    - Made filled barrels inherit the behavior of their contained fluid; empty barrels remain inert
-    - Limited solid-item fire work per tick and avoided scanning burner fuel inventories
-  Locale:
-    - Added English and French names and descriptions for all solid-item settings
----------------------------------------------------------------------------------------------------
-Version: 0.4.0
-Date: 2026-07-17
-  Features:
-    - Added an optional ignition delay with a smoke warning
-    - Added configurable ignition chances for each base damage type and a fallback for modded damage types
-    - Added configurable minimum explosion energy, fallback fluid energy, pollution, fire intensity, and per-tick processing limit
-    - Added fluid whitelist and blacklist settings
-    - Added entity category settings for pipes, tanks, fluid wagons, production machines, pumps, and other fluid entities
-    - Added persistent remote-interface controls for flammability, gas classification, and fluid energy
-  Changes:
-    - Combined energy from every flammable fluidbox in an entity
-    - Added fallback energy for explicitly flammable fluids without a prototype fuel value
-    - Calculated radial damage from the destroyed entity's footprint instead of only its center
-    - Limited the number of queued explosions processed per tick to protect performance during very large chain reactions
-    - Preserved remote fluid overrides across save and reload
-  Locale:
-    - Added English and French names and descriptions for all new settings
-    - Corrected the French damage multiplier description
----------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: 2026-07-17
+Date: 2026-07-18
+  Features:
+    - Updated and re-released as Flammable Oils Continued for Factorio 2.1.
+    - Added configurable ignition chances by damage type, ignition delay, minimum explosion energy, fallback fluid energy, pollution, fire spread, and per-tick processing limits.
+    - Added fluid whitelist and blacklist settings, entity-category controls, and persistent remote-interface overrides for fluid flammability, gas classification, and energy.
+    - Added optional fire reactions for wood, coal, solid fuel, rocket fuel, filled fluid barrels, and flamethrower ammunition.
+    - Added solid-item burning at exact positions on transport belts and for item stacks dropped on the ground.
+    - Added cargo reactions for supported items inside destroyed chests, logistic containers, linked containers, and cargo wagons.
+    - Added separate runtime settings for every supported solid item and location.
   Changes:
-    - Updated for Factorio 2.1
-    - Migrated fluid access from the removed LuaEntity.fluidbox and LuaFluidBox APIs to the new LuaEntity fluid methods
-    - Replaced the removed LuaEntity.neighbours API with LuaEntity.fluidbox_neighbours
-    - Deferred chain-reaction waves by one tick to prevent C stack overflows in large pipe networks
-    - Guarded zero-capacity and zero-radius calculations
-  Locale:
-    - Corrected the English damage multiplier description
----------------------------------------------------------------------------------------------------
-Version: 0.2.22
-Date: 2025-04-26
-  Info:
-    - Updated by Fr_Dae
-  Changes:
-    - water-turret2 by water-turret-revive in info.json
----------------------------------------------------------------------------------------------------
-Version: 0.2.21
-Date: 2025-04-23
-  Changes:
-    - Added some fluids from cubeine mod to override list
-    - Added global settings to control raddius and damage of the explsions
----------------------------------------------------------------------------------------------------
-Version: 0.2.20
-Date: 2025-03-20
-  Changes:
-    - Fixed mod not working
----------------------------------------------------------------------------------------------------
-Version: 0.2.19
-Date: 2025-03-20
-  Changes:
-    - Pump now doesn't explode
-    - Explosion / fire chance is based on the damage type
----------------------------------------------------------------------------------------------------
-Version: 0.2.18
-Date: 2025-03-19
-  Info:
-    - Updated by Fr_Dae
-  Changes:
-    - Fix issue with locale files
----------------------------------------------------------------------------------------------------
-Version: 0.2.17
-Date: 2025-03-14
-  Info:
-    - Updated by MsBinaryLily
-  Changes:
-    - Switched to new (cubic rather than quadratic) formula for damage and radius calculation
-    - Added extra linear falloff for damage depending on radius from center
-    - Reduced the pollution by factor by 10
-  Info:
-    - Updated by Fr_Dae
-    - add lily on Json
-    - remove zip from repo
-    - remove old issue screnshoot
----------------------------------------------------------------------------------------------------
-Version: 0.2.16
-Date: 2025-03-13
-  Info:
-    - Updated by MsBinaryLily
-  Changes:
-    - Updated from fire-flame to oil-fire-flame
-    - Buffed oil-fire-flame so it destroys pipes more reliably
-    - Added automatic burnable fluid and gas detection
-    - Ensured fuel values and pollution values are updated correctly
-    - Introduced energy, rather then just fraction, into explosion damage and radius calculation
----------------------------------------------------------------------------------------------------
-Version: 0.2.15
-Date: 2025-03-04
-  Info:
-    - Updated by Kannagi
-  Changes:
-    - Changed it from global to local instances.
-    - Updated from game.fluid_prototypes to prototypes.fluid_prototypes.
-    - Updated from oil-fire-flame to fire-flame
----------------------------------------------------------------------------------------------------
-Version: 0.2.14
-Date: 02. 11. 2024
-  Info:
-    - Updated by Fr_Dae
-  Changes:
-    - synthax fix
----------------------------------------------------------------------------------------------------
-Version: 0.2.13
-Date: 02. 11. 2024
-  Info:
-    - Updated by Fr_Dae
-  Changes:
-    - 2.0 update first try
----------------------------------------------------------------------------------------------------
-Version: 0.2.12
-
-  Change:
-    - commas fix - DragonMaus
----------------------------------------------------------------------------------------------------
-Version: 0.2.11
-
-  Change:
-    - del 🔥
-    - add ks_power in description
-    - pollution value (main()#2480)fucktorus
----------------------------------------------------------------------------------------------------
-Version: 0.2.10
-
-  Change:
-    - data missing
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.9
-
-  Change:
-    - add 🔥
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.8
-Date: 2020-10-19
-
-  Change:
-    - add water and acid NO flammable.
-    - Version:  1.0
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.7
-Date: 2020-09-20
-
-  Change:
-    - Change changelog
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.6
-Date: 2020-08-28
-
-  Change:
-    - Change changelog
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.5
-Date: 2020-08-28
-
-  Change:
-    - add "local emissions" Value.
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.4
-Date: 2020-08-21
-
-  Changes:
-    - Modify data-upDate: with local fuel_values ligne 8 ["crude-oil"] = "0.4MJ",
-    - Modify data-upDate: with local fuel_values ligne 8 ["light-oil"] = "0.9MJ",
-    - Modify data-upDate: with local fuel_values ligne 8 ["heavy-oil"] = "0.45MJ",
-    - Modify data-upDate: with local fuel_values ligne 8 ["petroleum-gas"] = "0.45MJ",
-    - Modify data-upDate: with local fuel_values ligne 8 ["diesel-fuel"] = "1.1MJ"
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.3
-Date: 2020-08-20
-
-  Changes:
-    - 0.18
-
----------------------------------------------------------------------------------------------------
-Version: 0.2.2
-Date: 2019-10-15
-
-  Changes:
-    - 0.17
+    - Combined energy from all flammable fluidboxes in an entity and added fallback energy for explicitly flammable fluids without prototype fuel values.
+    - Calculated explosion damage from the destroyed entity's footprint and preserved underground-pipe reactions.
+    - Made coal burn more slowly and produce more pollution than wood.
+    - Made solid fuel burn without detonating, while rocket fuel and flamethrower ammunition can cause explosions.
+    - Made filled barrels inherit the flammability, energy, emissions, and gas classification of their contained fluid; empty barrels remain inert.
+    - Disabled solid-item fires by default so they must be explicitly enabled, while keeping individual item and location options enabled behind the master switch.
+    - Limited chain-reaction and solid-item work per tick, and excluded burner fuel inventories from cargo scanning.
+    - Added complete English and French names and descriptions for all settings.
+  Bugfixes:
+    - Replaced removed Factorio runtime APIs for fluidboxes, fluid connections, and underground-pipe neighbours with their Factorio 2.1 equivalents.
+    - Deferred chain-reaction waves to prevent C stack overflows in large pipe networks.
+    - Guarded zero-capacity fluidboxes, zero-radius explosions, missing event positions, and stale queued solid-item reactions.
+    - Preserved existing fire-prototype creation effects when adding solid-item ignition detection.
+    - Corrected filled-barrel detection so unrelated barrel-like recipes and empty barrels are not treated as flammable.
+    - Corrected English and French setting descriptions and fluid override names.

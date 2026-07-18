@@ -1,19 +1,18 @@
 {
-  "name": "Flammable_Oils_QUICKFIX",
-  "title": "Flammable_Oils_QUICKFIX",
-  "description": "Pipes, storage tanks, and other fluid-handling entities can catch fire and explode. Optional solid-item fires affect belts, ground stacks, and destroyed cargo (original mod by Klonan and OwnlyMe).",
-
-  "author": "Fr_Dae, Pi-c, Kannagimoe, Klonan, lily",
-  "contact": "Dae.anthony@gmail.com",
-  "homepage": "https://github.com/FrDae-Factorio-QuickFix/Flammable_Oils_QUICKFIx",
-
-  "version": "0.5.0",
+  "name": "flammable-oils-continued",
+  "version": "0.3.0",
   "factorio_version": "2.1",
+  "title": "Flammable Oils Continued",
+  "author": "cciacona",
+  "homepage": "https://mods.factorio.com/mod/flammable-oils-continued",
+  "description": "Fluid-handling entities can catch fire and explode based on their contents. Adds configurable ignition behavior and optional combustible-item fires on belts, on the ground, and in destroyed cargo.",
   "dependencies": [
     "base >= 2.1.0",
     "? KS_Power",
     "? Factorio-Tiberium",
     "? WaterTurret-revived",
-    "? lilys-incendiaries"
+    "? lilys-incendiaries",
+    "! Flammable_Oils",
+    "! Flammable_Oils_QUICKFIX"
   ]
 }
